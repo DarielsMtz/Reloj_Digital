@@ -8,12 +8,50 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  font-family: "DS";
+  src: url("../font/DS-DIGIT.TTF");
 }
 
 /* ******************************** */
 
 /* Colores */
+:root {
+  --c-fondo: #151515;
+  --c-reloj: #101010;
+  --c-numeros: #f8f9f9;
 
+  /* Efectos */
+  --sombra: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 /* ******************************** */
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--c-fondo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Estilos generales para el reloj flip */
+.time {
+  display: inline-block;
+  font-family: "DS", sans-serif;
+  line-height: 1;
+  font-size: 10rem;
+  text-align: center;
+
+  /* Estilos para el fondo del reloj flip */
+  background-color: var(--c-reloj);
+  color: var(--c-numeros);
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+  min-width: 520px;
+}
